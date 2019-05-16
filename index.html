@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Emblema+One|Shrikhand|Source+Code+Pro:300" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Document</title>
+</head>
+<body class="custom">
+    
+    <header>
+        <h1>ask me a question!</h1>
+        <p>let the magic 8 ball decide your fate</p>
+        <fieldset>
+            <legend class="visuallyHidden">Ask a yes or no question.</legend>
+            <label for="question" class="visuallyHidden"></label>
+            <input type="text" id="question" class="question" placeholder="yes or no question">
+            <label for="button" class="visuallyHidden">Submit question</label>
+            <button type="submit" class="ask shadow-pop-tl">?</button>
+        </fieldset>
+    </header>
+    
+    <div class="resultContainer">
+        <div class="answerAppears"></div>
+        <div class="image shake-top">
+            <img src="assets/magic8Ball.svg" alt="">
+        </div>
+    </div>
+    
+    
+
+    
+    <script src='https://code.jquery.com/jquery-3.2.1.min.js'
+    integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=' crossorigin='anonymous'></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
