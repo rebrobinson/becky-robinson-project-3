@@ -6,6 +6,7 @@ body {
     background: plum;
     font-family: 'Source Code Pro', monospace;
     font-size: 20px;
+    scroll-behavior: smooth;
 }
 
 header {
@@ -81,7 +82,8 @@ button:active {
 .resultContainer {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
     height: 100vh;
     background: hotpink;
     .answerAppears {
@@ -94,18 +96,21 @@ button:active {
         }
         h2 {
             font-family: 'Emblema One', cursive;
-            font-size: 60px;
+            font-size: 50px;
             color: lavender;
             text-align: center;
         }
     }
 }
 
-
-
 .image {
     width: calc(60% - 50px);
     margin-right: 50px;
+    img {
+    display: block;
+    max-width: 100%;
+    width: 100%;;
+}
 }
 
 .shake-top{animation:shake-top 1.5s cubic-bezier(.455,.03,.515,.955) both}
@@ -119,8 +124,13 @@ button:active {
 
 //make sure to addClass of shake-top on click
 
-img {
-    display: block;
-    max-width: 100%;
-    width: 100%;;
+
+
+.try-again {
+    margin: 0 auto;
+    background: mediumslateblue;
+    border: none;
+    color: lavender;
+    font-size: 18px;
+    padding: 10px;
 }

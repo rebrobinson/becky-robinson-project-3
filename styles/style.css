@@ -148,7 +148,8 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 body {
   background: plum;
   font-family: 'Source Code Pro', monospace;
-  font-size: 20px; }
+  font-size: 20px;
+  scroll-behavior: smooth; }
 
 header {
   display: -webkit-box;
@@ -256,9 +257,11 @@ button:active {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   height: 100vh;
   background: hotpink; }
   .resultContainer .answerAppears {
@@ -270,13 +273,17 @@ button:active {
       color: mediumslateblue; }
     .resultContainer .answerAppears h2 {
       font-family: 'Emblema One', cursive;
-      font-size: 60px;
+      font-size: 50px;
       color: lavender;
       text-align: center; }
 
 .image {
   width: calc(60% - 50px);
   margin-right: 50px; }
+  .image img {
+    display: block;
+    max-width: 100%;
+    width: 100%; }
 
 .shake-top {
   -webkit-animation: shake-top 1.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
@@ -329,7 +336,10 @@ button:active {
     -webkit-transform: rotate(2deg);
     transform: rotate(2deg); } }
 
-img {
-  display: block;
-  max-width: 100%;
-  width: 100%; }
+.try-again {
+  margin: 0 auto;
+  background: mediumslateblue;
+  border: none;
+  color: lavender;
+  font-size: 18px;
+  padding: 10px; }
