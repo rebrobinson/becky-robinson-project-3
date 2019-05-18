@@ -39,9 +39,16 @@ $(function(){
     $('.ask').on('click', function(event) {
         event.preventDefault();
         let userQuestion = $('input[type=text]').val();
+        //if userQuestion has no input, do the following
+        if (userQuestion === '') {
+            //this is making the warning text show up 
+            $('.warning').addClass('opacity');
+        }
         //only want these things to happen if the text input isn't empty
-        
         if (userQuestion !== '') {
+            $('.resultContainer').removeClass('visuallyHidden');
+            //make the warning hidden again 
+            $('.warning').removeClass('opacity');
             console.log(userQuestion);
             //*a mentor helped me get to this(window.location)* 
             //window.location is referring to the location I am in on the page, the split part is turning the url of the location into an array and splitting off everything after the # so that #resultContainer won't repeat appending everytime the button is clicked
@@ -57,19 +64,23 @@ $(function(){
         }
         //add a class of shake-top to the image div so that it shakes when the button is clicked
         $('div.image').addClass('shake-top');
-    })
+    });
 
     //when the user clicks the try again button,
     $('.try-again').on('click', function (event) {
         //preventing default action of this button
         event.preventDefault();
+        //this removes the animation class when try again is clicked so that it can add it back when ask button is clicked again
+        $('div.image').removeClass('shake-top');
         //change the value of the input to an empty string (bring it back to the placeholder)
         $('input[type="text"]').val('');
+        //bringing the window location back up to header
         const location = window.location.href.split('#')[0];
         //this is appending the #resultContainer id to the url of where we are so that it takes us there
         window.location = `${location}#header`;
-    })
-    
+        $('.resultContainer').addClass('visuallyHidden');
+    })  
+
 
 })
 

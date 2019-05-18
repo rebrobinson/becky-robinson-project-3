@@ -38,6 +38,18 @@ p {
     color: lavender;
 }
 
+.warning {
+    opacity: 0;
+    padding: 0;
+    margin: 0;
+    font-size: 15px;
+    color: mediumslateblue;   
+}
+
+.opacity {
+    opacity: 1;
+}
+
 fieldset {
     border: none;
     display: flex;
