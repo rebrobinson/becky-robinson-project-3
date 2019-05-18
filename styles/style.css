@@ -267,32 +267,45 @@ button:active {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
   height: 100vh;
   background: hotpink; }
-  .resultContainer .answerAppears {
+  .resultContainer .answer-and-button {
     width: 40%;
-    padding: 25px; }
-    .resultContainer .answerAppears p {
+    padding: 25px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+    .resultContainer .answer-and-button .answerAppears p {
       text-align: center;
       font-size: 25px;
       color: mediumslateblue; }
-    .resultContainer .answerAppears h2 {
+    .resultContainer .answer-and-button .answerAppears h2 {
       font-family: 'Emblema One', cursive;
       font-size: 50px;
       color: lavender;
       text-align: center; }
+    .resultContainer .answer-and-button .try-again {
+      margin: 0 auto;
+      margin-top: 30px;
+      background: mediumslateblue;
+      border: none;
+      color: lavender;
+      font-size: 18px;
+      padding: 10px; }
 
 .image {
   width: calc(60% - 50px);
   margin-right: 50px; }
   .image img {
     display: block;
-    max-width: 100%;
+    max-width: 700px;
     width: 100%; }
 
 .shake-top {
@@ -345,11 +358,3 @@ button:active {
   90% {
     -webkit-transform: rotate(2deg);
     transform: rotate(2deg); } }
-
-.try-again {
-  margin: 0 auto;
-  background: mediumslateblue;
-  border: none;
-  color: lavender;
-  font-size: 18px;
-  padding: 10px; }
