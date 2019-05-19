@@ -1,5 +1,4 @@
 @import "_partials/_setup.scss";
-@import "_partials/_media-queries.scss";
 
 
 body {
@@ -62,6 +61,11 @@ input.question {
     width: 500px;
     text-align: center;
     color: hotpink;
+}
+
+input.question:active,
+input.question:focus {
+    border: 2px solid hotpink;
 }
 
 .ask {

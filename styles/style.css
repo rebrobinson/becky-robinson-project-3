@@ -207,6 +207,10 @@ input.question {
   text-align: center;
   color: hotpink; }
 
+input.question:active,
+input.question:focus {
+  border: 2px solid hotpink; }
+
 .ask {
   background: hotpink;
   color: plum;

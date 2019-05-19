@@ -16,10 +16,10 @@
         <p>let the magic 8 ball decide your fate</p>
         <p class="warning">you must enter a question!</p>
         <fieldset>
-            <legend class="visually-hidden">Ask a yes or no question.</legend>
-            <label for="question" class="visually-hidden"></label>
+            <legend class="visually-hidden">question input</legend>
+            <label for="question" class="visually-hidden">ask a yes or no question</label>
             <input type="text" id="question" class="question" placeholder="yes or no question">
-            <label for="button" class="visually-hidden">Submit question</label>
+            <label for="button" class="visually-hidden">click to submit question</label>
             <button type="submit" class="ask">?</button>
         </fieldset>
         <div class="credit">
@@ -30,7 +30,8 @@
     <div class="result-container visually-hidden" id="result-container">
         <div class="answer-and-button">
             <div class="answer-appears"></div>
-            <button type="submit" class="try-again">try again</button>
+            <label for="try-again-button" class="visually-hidden">click to try again</label>
+            <button type="submit" class="try-again" id="try-again-button">try again</button>
         </div>
         <div class="image">
             <img src="assets/magic-8-ball.svg" alt="">
