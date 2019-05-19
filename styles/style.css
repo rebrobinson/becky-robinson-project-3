@@ -132,7 +132,7 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
-.visuallyHidden:not(:focus):not(:active) {
+.visually-hidden:not(:focus):not(:active) {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -162,7 +162,8 @@ header {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 100vh; }
+  height: 100vh;
+  position: relative; }
 
 .custom {
   cursor: url(../assets/cursor.png), auto; }
@@ -180,7 +181,8 @@ h1 {
 p {
   margin-bottom: 50px;
   margin-top: 50px;
-  color: lavender; }
+  color: lavender;
+  text-align: center; }
 
 .warning {
   opacity: 0;
@@ -201,7 +203,6 @@ fieldset {
 input.question {
   background: lavender;
   border: none;
-  padding: 10px;
   width: 500px;
   text-align: center;
   color: hotpink; }
@@ -232,7 +233,15 @@ input.question {
 .ask:hover {
   background: mediumslateblue; }
 
-.resultContainer {
+.credit p {
+  font-size: 12px;
+  color: mediumslateblue;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 10px;
+  right: 20px; }
+
+.result-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -241,7 +250,7 @@ input.question {
   align-items: center;
   height: 100vh;
   background: hotpink; }
-  .resultContainer .answer-and-button {
+  .result-container .answer-and-button {
     width: 40%;
     padding: 25px;
     display: -webkit-box;
@@ -254,16 +263,16 @@ input.question {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center; }
-    .resultContainer .answer-and-button .answerAppears p {
+    .result-container .answer-and-button p {
       text-align: center;
       font-size: 25px;
       color: mediumslateblue; }
-    .resultContainer .answer-and-button .answerAppears h2 {
+    .result-container .answer-and-button h2 {
       font-family: 'Emblema One', cursive;
       font-size: 50px;
       color: lavender;
       text-align: center; }
-    .resultContainer .answer-and-button .try-again {
+    .result-container .answer-and-button .try-again {
       margin: 0 auto;
       margin-top: 30px;
       background: mediumslateblue;
@@ -271,9 +280,9 @@ input.question {
       color: lavender;
       font-size: 18px;
       padding: 10px; }
-    .resultContainer .answer-and-button .try-again:active,
-    .resultContainer .answer-and-button .try-again:focus,
-    .resultContainer .answer-and-button .try-again:hover {
+    .result-container .answer-and-button .try-again:active,
+    .result-container .answer-and-button .try-again:focus,
+    .result-container .answer-and-button .try-again:hover {
       background: plum; }
 
 .image {
@@ -334,3 +343,54 @@ input.question {
   90% {
     -webkit-transform: rotate(2deg);
     transform: rotate(2deg); } }
+
+@media (max-width: 750px) {
+  h1 {
+    font-size: 80px; }
+  input.question {
+    width: 400px; }
+  header p {
+    margin-bottom: 20px;
+    margin-top: 50px;
+    color: lavender; } }
+
+@media (max-width: 550px) {
+  h1 {
+    font-size: 50px;
+    line-height: 60px; }
+  p {
+    font-size: 18px; }
+  fieldset {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    fieldset input.question {
+      padding: 10px;
+      width: 300px; }
+    fieldset .ask {
+      margin-left: 0;
+      margin-top: 50px; }
+  .result-container {
+    padding-bottom: 50px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse; }
+    .result-container .image {
+      width: 100%;
+      max-width: 300px;
+      margin-left: 80px; }
+    .result-container .answer-and-button {
+      width: 100%; }
+    .result-container .answer-and-button p {
+      margin: 0;
+      font-size: 18px; }
+    .result-container .answer-and-button .try-again {
+      margin-top: 20px;
+      margin-bottom: 40px; }
+    .result-container .answer-and-button h2 {
+      font-size: 30px; } }

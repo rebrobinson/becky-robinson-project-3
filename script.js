@@ -46,19 +46,18 @@ $(function(){
         }
         //only want these things to happen if the text input isn't empty
         if (userQuestion !== '') {
-            $('.resultContainer').removeClass('visuallyHidden');
+            $('.result-container').removeClass('visually-hidden');
             //make the warning hidden again 
             $('.warning').removeClass('opacity');
-            console.log(userQuestion);
             //*a mentor helped me get to this(window.location)* 
-            //window.location is referring to the location I am in on the page, the split part is turning the url of the location into an array and splitting off everything after the # so that #resultContainer won't repeat appending everytime the button is clicked
+            //window.location is referring to the location I am in on the page, the split part is turning the url of the location into an array and splitting off everything after the # so that #result-container won't repeat appending everytime the button is clicked
             const location = window.location.href.split('#')[0];
-            //this is appending the #resultContainer id to the url of where we are so that it takes us there
-            window.location = `${location}#resultContainer`;
+            //this is appending the #result-container id to the url of where we are so that it takes us there
+            window.location = `${location}#result-container`;
             //store the random index as a variable
             let answer = randomAnswerIndex(answerOptions);
             //when the user clicks the button, make the random answer show up as an h2 element and repeat their question in a p tag
-            $('.answerAppears').html(`<p>you asked: "${userQuestion}"</p> <h2 class='answerShown'>${answer}</h2>`);
+            $('.answer-appears').html(`<p>you asked: "${userQuestion}"</p> <h2 class='answer-shown'>${answer}</h2>`);
             // this is hiding the answer so that it can fade in 
             $('.answerShown').hide().fadeIn(3500)
         }
@@ -76,9 +75,9 @@ $(function(){
         $('input[type="text"]').val('');
         //bringing the window location back up to header
         const location = window.location.href.split('#')[0];
-        //this is appending the #resultContainer id to the url of where we are so that it takes us there
+        //this is appending the #result-container id to the url of where we are so that it takes us there
         window.location = `${location}#header`;
-        $('.resultContainer').addClass('visuallyHidden');
+        $('.result-container').addClass('visually-hidden');
     })  
 
 
