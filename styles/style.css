@@ -205,7 +205,8 @@ input.question {
   border: none;
   width: 500px;
   text-align: center;
-  color: hotpink; }
+  color: hotpink;
+  border-radius: 0; }
 
 input.question:active,
 input.question:focus {
