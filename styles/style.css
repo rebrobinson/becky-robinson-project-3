@@ -194,7 +194,7 @@ p {
 .opacity {
   opacity: 1; }
 
-fieldset {
+.form {
   border: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -364,7 +364,7 @@ input.question:focus {
     line-height: 60px; }
   p {
     font-size: 18px; }
-  fieldset {
+  .form {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -372,10 +372,10 @@ input.question:focus {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center; }
-    fieldset input.question {
+    .form input.question {
       padding: 10px;
       width: 300px; }
-    fieldset .ask {
+    .form .ask {
       margin-left: 0;
       margin-top: 50px; }
   .result-container {

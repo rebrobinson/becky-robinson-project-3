@@ -50,7 +50,7 @@ p {
     opacity: 1;
 }
 
-fieldset {
+.form {
     border: none;
     display: flex;
 }
@@ -186,7 +186,7 @@ input.question:focus {
     p {
         font-size: 18px;
     }
-    fieldset {
+    .form {
         flex-direction: column;
         align-items: center;
         input.question {
