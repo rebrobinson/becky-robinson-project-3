@@ -168,6 +168,7 @@ input.question:focus {
 @media (max-width: 750px) {
     h1 {
         font-size: 80px;
+        line-height: 70px;
     }
     input.question {
         width: 400px;
@@ -184,7 +185,7 @@ input.question:focus {
 @media (max-width: 550px) {
     h1 {
         font-size: 50px;
-        line-height: 60px;
+        line-height: 45px;
         text-shadow: 3px 3px 0px hotpink;
     }
     p {
