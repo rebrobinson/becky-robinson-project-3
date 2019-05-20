@@ -205,7 +205,9 @@ input.question {
   border: none;
   width: 500px;
   text-align: center;
-  color: hotpink; }
+  color: hotpink;
+  border-radius: 0;
+  -webkit-appearance: none; }
 
 input.question:active,
 input.question:focus {
@@ -230,7 +232,8 @@ input.question:focus {
   margin-left: 50px;
   font-weight: bold;
   font-size: 40px;
-  border: none; }
+  border: none;
+  padding: 0px; }
 
 .ask:active,
 .ask:focus,
@@ -361,7 +364,8 @@ input.question:focus {
 @media (max-width: 550px) {
   h1 {
     font-size: 50px;
-    line-height: 60px; }
+    line-height: 60px;
+    text-shadow: 3px 3px 0px hotpink; }
   p {
     font-size: 18px; }
   .form {

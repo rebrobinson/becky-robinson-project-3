@@ -59,7 +59,7 @@ $(function(){
             //when the user clicks the button, make the random answer show up as an h2 element and repeat their question in a p tag
             $('.answer-appears').html(`<p>you asked: "${userQuestion}"</p> <h2 class='answer-shown'>${answer}</h2>`);
             // this is hiding the answer so that it can fade in 
-            $('.answerShown').hide().fadeIn(3500)
+            $('.answer-shown').hide().fadeIn(3500)
         }
         //add a class of shake-top to the image div so that it shakes when the button is clicked
         $('div.image').addClass('shake-top');

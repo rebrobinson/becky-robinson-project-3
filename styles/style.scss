@@ -61,6 +61,8 @@ input.question {
     width: 500px;
     text-align: center;
     color: hotpink;
+    border-radius: 0;
+    -webkit-appearance: none;
 }
 
 input.question:active,
@@ -82,6 +84,7 @@ input.question:focus {
     font-weight: bold;
     font-size: 40px;
     border: none;
+    padding: 0px;
 }
 
 .ask:active,
@@ -182,6 +185,7 @@ input.question:focus {
     h1 {
         font-size: 50px;
         line-height: 60px;
+        text-shadow: 3px 3px 0px hotpink;
     }
     p {
         font-size: 18px;
